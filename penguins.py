@@ -16,5 +16,5 @@ penguins_size['colour'] = colour
 same_graph = penguins_size.plot.scatter(x = 'flipper_length_mm', y = 'culmen_length_mm', c = 'colour').get_figure()
 same_graph.savefig('same_graph.png')
 for key, frame in penguins_size.groupby('species'):
-  different_graphs = frame.plot.scatter(x = 'flipper_length_mm', y= 'culmen_length_mm', title = key, c = 'colour').get_figure()
+  different_graphs = frame.plot.scatter(x = 'flipper_length_mm', y= 'culmen_length_mm', c = 'colour', title = key).get_figure()
   different_graphs.savefig('graph'+str(key)+'.png')
