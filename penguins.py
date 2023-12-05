@@ -11,7 +11,7 @@ for i in range(len(penguins_size)):
   elif species[i] == 'Gentoo':
       colour.append('blue')
   else:
-    colour.append('olive')
+    colour.append('green')
 penguins_size['colour'] = colour
 same_graph = penguins_size.plot.scatter(x = 'flipper_length_mm', y = 'culmen_length_mm', c = 'colour').get_figure()
 same_graph.savefig('same_graph.png')
